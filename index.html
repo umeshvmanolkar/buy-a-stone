@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Buy a Stone – Save My Soul 🪨</title>
+  <script src="https://unpkg.com/tabletop@1.5.4/tabletop.js"></script>
+
+  <link rel="icon" type="image/png" href="stone-img-title.png" sizes="1000x1000px">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Fun Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Fredoka', sans-serif;
+      background: url('stone-bg.png') repeat;
+      background-size: cover;
+      color: #333;
+    }
+  
+    .container {
+      max-width: 720px;
+      margin: auto;
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    }
+  
+    .hero {
+      background: #ffe97f;
+      padding: 30px 20px;
+      border-radius: 15px;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+  
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+  
+    h2 {
+      font-size: 1.6rem;
+      margin-top: 30px;
+      text-align: center;
+    }
+  
+    .section {
+      margin: 30px 0;
+      background: #ffffffcc;
+      border-radius: 15px;
+      padding: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    }
+  
+    .qr {
+      display: flex;
+      justify-content: center;
+      margin-top: 10px;
+    }
+  
+    img.qr-code {
+      max-width: 180px;
+      border: 4px dashed #555;
+      padding: 10px;
+      border-radius: 10px;
+      background: #fff;
+    }
+  
+    .upi {
+      text-align: center;
+      font-size: 18px;
+      margin-top: 12px;
+      font-weight: bold;
+    }
+  
+    iframe {
+      width: 100%;
+      height: 600px;
+      border: none;
+      border-radius: 10px;
+    }
+  
+    .btn {
+      display: inline-block;
+      padding: 12px 24px;
+      background: #ff944d;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 30px;
+      transition: 0.3s;
+      margin-top: 20px;
+    }
+  
+    .btn:hover {
+      background: #ff7315;
+      transform: scale(1.05);
+    }
+  
+    footer {
+      text-align: center;
+      font-size: 14px;
+      margin: 40px 0 20px;
+      color: #888;
+    }
+
+    .wall {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.golden-stone {
+  background: url('stone-img-title.png') no-repeat center/contain;
+  background-size: contain;
+  width: 120px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #ffd700;
+  font-weight: bold;
+  font-size: 16px;
+  padding: 10px;
+  box-shadow: 0 4px 12px rgba(255, 215, 0, 0.4);
+  filter: sepia(1) hue-rotate(-10deg) saturate(4);
+}
+
+
+
+@keyframes glow {
+  from { box-shadow: 0 0 10px gold; }
+  to { box-shadow: 0 0 25px gold; }
+}
+
+
+.stone {
+  background: url('stone-img-title.png') no-repeat center/contain;
+  background-size: contain;
+  width: 120px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  font-weight: bold;
+  font-size: 16px;
+  padding: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+
+  </style>
+  
+</head>
+<body>
+  <div class="container">
+    <div class="hero">
+      <h1> <img src="stone-img-title.png" alt="Stone" style="height: 40px; vertical-align: middle; margin-right: 10px;">Buy a Stone<img src="stone-img-title.png" alt="Stone" style="height: 40px; vertical-align: middle; margin-right: 10px;">
+      </h1>
+      <p style="font-size: 1.2rem;">Help me crush my loan with... stones 😅</p>
+      <a class="btn" href="#payment">Buy Now – ₹149</a>
+    </div>
+
+    <div class="section">
+      <h2>💬 Why Stones?</h2>
+      <p>
+        Hey! I’m just a regular human with irregular loan pressure 😓<br><br>
+        So I had this crazy idea: Why not sell... stones? 😄<br>
+        You’re not donating — you’re buying a piece of raw, untamed, 100% natural stone. Comes with zero warranty but infinite love 💖
+      </p>
+    </div>
+
+    <div class="section" id="progress">
+        <h2>💰 Rock Fund Progress</h2>
+        <div class="section" id="fund-progress">
+            <!-- Fund data will be injected here -->
+          </div>
+      </div>
+
+      
+      
+
+    <div class="section" id="payment">
+      <h2>💸 Make Payment</h2>
+      <div class="qr">
+        <img src="gpayqr.jpg" alt="UPI QR Code" class="qr-code">
+      </div>
+      <p class="upi">Pay via UPI to: <strong>umeshmanolkar7@okaxis</strong></p>
+      <p style="text-align:center;">Suggested: ₹149 per rock – but hey, rock stars can pay more 😉</p>
+    </div>
+
+    <div class="section">
+      <h2>📬 Send Your Details</h2>
+      <p>
+        Paid already? Awesome! Now let me know where to ship your rock or send your virtual certificate of "rock ownership"
+      </p>
+      <iframe src="https://forms.gle/WKgzNvk4b4FzLriZA" width="640" height="600" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+
+    </div>
+
+    <!-- <div class="section">
+        <h2>🏆 Wall of Fame</h2>
+        <p style="text-align:center;">These legends bought a rock and helped build my life 💖🪨</p>
+      
+        <div class="wall">
+          <div class="stone">Rahul</div>
+          <div class="stone">Sneha</div>
+          <div class="golden-stone">Amit</div>  Golden -->
+          <!-- <div class="stone">Priya</div>
+          <div class="stone">David</div>
+          <div class="golden-stone">Zara</div>  Golden -->
+        <!-- </div> -->
+      <!-- </div> -->
+
+      <!-- <div class="section">
+        <h2>🏆 Wall of Fame</h2>
+        <p style="text-align:center;">These legends bought a rock and helped build my life 💖🪨</p>
+        <div class="wall" id="wall-of-fame">
+          Dynamic stone names will go here 
+        </div>
+      </div> -->
+      
+      
+      
+      
+    
+    <footer>
+      © 2025 – BuyAStone • Built with 💰 & 💖
+    </footer>
+  </div>
+
+
+  
+  
+
+  <script>
+    // const csvURL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQ5w5sbGcwtWeVRmqJd_yChE6GyWgkU_r6iiaApNnQXMN7xrVXN-3YmP2cdOt_IbiY-QAIOBKkQPmiN/pub?output=csv';
+  
+    // async function fetchCSV() {
+    //   const response = await fetch(csvURL);
+    //   const text = await response.text();
+    //   const rows = text.split('\n').slice(1); // Skip header row
+    //   const wall = document.getElementById('wall-of-fame');
+  
+    //   rows.forEach((row, index) => {
+    //     const [nameRaw, amountRaw] = row.split(',');
+    //     const name = nameRaw?.replace(/"/g, '').trim() || `Supporter #${index+1}`;
+    //     const amount = parseInt(amountRaw?.replace(/"/g, '')) || 0;
+  
+    //     const div = document.createElement('div');
+    //     div.className = amount >= 149 ? 'golden-stone' : 'stone';
+    //     div.textContent = name;
+    //     wall.appendChild(div);
+    //   });
+    // }
+  
+    // window.addEventListener('DOMContentLoaded', fetchCSV);
+
+    const total = 0;
+    const goal = 1215000;
+const progress = Math.min(100, Math.round((total / goal) * 100));
+
+document.getElementById('fund-progress').innerHTML = `
+  <p>Collected: ₹${total} of ₹${goal} goal</p>
+  <div style="background:#ddd; border-radius:30px; height:20px; overflow:hidden;">
+    <div style="width:${progress}%; background:#4caf50; height:100%; border-radius:30px;"></div>
+  </div>
+`;
+
+  </script>
+  
+
+
+
+</body>
+</html>
